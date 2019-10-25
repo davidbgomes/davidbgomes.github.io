@@ -1,11 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-function App (props){
-   return{
+
+function Home (props){
+   return(
       <div>
-         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href=""
-         </nav>
+         <p>Home page</p>
       </div>
-   }
+   )
 }
+
+export default Home
