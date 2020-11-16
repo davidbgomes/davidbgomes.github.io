@@ -151,6 +151,7 @@ p {
   line-height: 22px;
   padding-top: 6px;
   text-transform: none;
+  text-align: justify;
 }
 
 .details p:last-child{
@@ -230,4 +231,10 @@ p {
 		background-color: #222222;
 		color: white;*/
 	}
+}
+
+@media only screen and (max-width : 768px) {
+  .details p{
+    font-size: 17px;
+  }
 }

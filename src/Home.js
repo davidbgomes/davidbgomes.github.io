@@ -7,6 +7,7 @@ import { Slug, Fade } from './components/Primitives'
 import data from './components/Data'
 import { faTimes, faUserTie, faAward, faBriefcase , faProjectDiagram } from '@fortawesome/free-solid-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
+import { isMobile } from "react-device-detect"
 
 
 class Cell extends React.Component {
@@ -34,7 +35,7 @@ class Cell extends React.Component {
                             </div>
                             <h1>{name}</h1>
                             {name === "About Me" ?
-                                <div className="gridContentDiv mb-auto">
+                                <div className={`mb-auto ${isMobile && " gridContentDiv"}`}>
                                     <p>Born and raised in Lisbon, I've a Bachelor's Degree in Computer Sciences in Universidade Nova de Lisboa.</p>
                                     <p>Ever since my Dad bought his first PC and showed me MS-DOS and early videogames, I was fascinated by that world, which led me to
                                         pursue a carreer as a software engineer.
@@ -50,11 +51,11 @@ class Cell extends React.Component {
                             :
                                 name === "Projects" ?
                                     <React.Fragment>
-                                        <div className="gridContentDiv">
+                                        <div className={`mb-auto ${isMobile && " gridContentDiv"}`}>
                                             <p className="mt-3">
                                                 Over the years I taught myself Javascript (Vanilla, React.js and Node.js).
                                                 As I went on to learn how to do basic to-do lists and calculators and began to have a deeper understanding of how it works, I 
-                                                I started developing an E-Commerce website, that over time and with a lot of work, 
+                                                started developing an E-Commerce website, that over time and with a lot of work, 
                                                 became <a target="_blank" className="textLink" href="https://oxyllus.pt">Oxyllus</a>.
                                                  So far it's only available in Portugal. I sell one product at a time and for each sale made, a tree will be planted.
                                             </p>
@@ -103,7 +104,7 @@ class Cell extends React.Component {
                                         
                                     :
                                         name === "Job Experience" ?
-                                        <div className="gridContentDiv mb-auto">
+                                        <div className={`mb-auto ${isMobile && " gridContentDiv"}`}>
                                             <p>
                                                 <ul>
                                                     <li className="mt-3">Inocrowd - After college, I interned at a start-up and worked as a Web Developer, mainly with HTML, CSS and Wordpress.</li>
@@ -178,7 +179,7 @@ class Home extends React.Component{
                     // Key accessor, instructs grid on how to fet individual keys from the data set
                     keys={d => d.name}
                     // Can be a fixed value or an individual data accessor
-                    heights={150}
+                    heights={180}
                     // Number of columns
                     columns={2}
                     // Space between elements
