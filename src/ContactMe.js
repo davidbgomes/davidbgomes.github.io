@@ -1,6 +1,8 @@
 import React from "react"
 import { useAlert } from 'react-alert'
 import { Alert } from 'reactstrap'
+import { Link } from "react-router-dom"
+import {Helmet} from 'react-helmet'
 
 class ContactMe extends React.Component{
 
@@ -63,11 +65,13 @@ class ContactMe extends React.Component{
 
   	toggleAlert(){
   		if(this.state.name !== "" && this.state.email !== "" && this.state.message !== ""){		
-	  		this.setState(prevState => {
-	  			return{
-	  				showAlert: !prevState.showAlert
-	  			}
-	  		})
+	  		setTimeout(() => {
+		  		this.setState(prevState => {
+		  			return{
+		  				showAlert: !prevState.showAlert
+		  			}
+		  		})
+	  		}, 500)
   		}
   	}
 
@@ -76,37 +80,65 @@ class ContactMe extends React.Component{
 			console.log(this.state.showAlert)
 		return(
 
-
-			<div className="container-fluid">
+			<div className="container-fluid" style={{paddingBottom:"200px"}}>
+				<Helmet>
+	    			<title>David Gomes - Contact Me</title>
+    				<meta name="description" content="Contact me through this form for job offers or questions." />
+    			</Helmet>
 
 				<Alert className="alert-success" color="primary" isOpen={this.state.showAlert} toggle={this.toggleAlert}> Email sent successfully! </Alert>
-				<h2>Contact Me</h2>
+				<h1>Contact Me</h1>
 				<p>Feel free to contact me about possible job opportunities or questions you may have.</p>
-				<p style={{paddingBottom:"50px"}}>I'll get back to you as soon as possible.</p>
+				<p className="pb-3">I'll get back to you as soon as possible.</p>
 
 				<form onSubmit={this.handleSubmit}>
 					<div className="row">
 						<div className="col">
 							<div className="form-group">
 								<label htmlFor="nameInput">Name/Company:</label>
-								<input type="text" className="form-control" onChange={this.handleNameChange} id="nameInput" placeholder="Enter your name or the company name" required={true}/>
+								<input
+									style={{maxWidth:"500px"}}
+									type="text"
+									className="form-control"
+									onChange={this.handleNameChange}
+									id="nameInput"
+									placeholder="Enter your name or the company name"
+									required
+								/>
 							</div>
 						</div>
+					</div>
+					<div className="row">
 						<div className="col">
 							<div className="form-group">
 								<label htmlFor="emailInput">Email:</label>
-								<input type="email" className="form-control" onChange={this.handleEmailChange} id="emailInput" placeholder="Enter your email address" required={true}/>
+								<input
+									style={{maxWidth:"500px"}}
+									type="email"
+									className="form-control"
+									onChange={this.handleEmailChange}
+									id="emailInput"
+									placeholder="Enter your email address"
+									required
+								/>
 							</div>
 						</div>
 					</div>
 					<div className="form-group">
 						<label htmlFor="message">Message:</label>
-						<textarea className="form-control" value={this.message} onChange={this.handleTextChange} placeholder="Message goes here" cols="50" rows="15" id="message" required={true}/>
+						<textarea
+							className="form-control"
+							value={this.message}
+							onChange={this.handleTextChange}
+							placeholder="Message goes here"
+							rows="10"
+							id="message"
+							required
+						/>
 					</div>
 					<button className ="btn btn-primary" onClick={this.toggleAlert}>
-	        			Submit
-	      			</button>
-					
+		        		Submit
+		      		</button>
 				</form>
 			</div>
 		)
