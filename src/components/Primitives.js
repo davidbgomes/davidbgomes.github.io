@@ -14,7 +14,7 @@ export class Slug extends React.PureComponent {
       const props = {
         ...child.props,
         style: {
-          willChange: 'opacity, transform',
+          willChange: 'opacity, transform, display',
           ...child.props.style,
           ...styles,
         },
@@ -40,9 +40,9 @@ export class Fade extends React.PureComponent {
     const {
       children,
       show,
-      from = { opacity: 0 },
-      enter = { opacity: 1 },
-      leave = { opacity: 0 },
+      from = { opacity: 0 , display:"none"},
+      enter = { opacity: 1 , display:"initial"},
+      leave = { opacity: 0 , display:"none"},
       ...rest
     } = this.props
 
@@ -52,7 +52,7 @@ export class Fade extends React.PureComponent {
       const newProps = {
         ...props,
         style: {
-          willChange: 'opacity, transform',
+          willChange: 'opacity, transform, display',
           ...props.style,
           ...styles,
         },

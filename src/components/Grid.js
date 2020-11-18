@@ -13,7 +13,7 @@ const styles = {
   },
   cell: {
     position: 'absolute',
-    willChange: 'transform, width, height, opacity',
+    willChange: 'transform, width, height, opacity, display',
   },
 }
 
@@ -62,6 +62,7 @@ export default class Grid extends React.Component {
     const open = this.state.open === key
     return {
       opacity: this.state.open && !open ? 0 : 1,
+      display: this.state.open && !open ? "none" : "flex",
       x: open ? this.outerRef.scrollLeft : x,
       y: open ? this.outerRef.scrollTop : y,
       width: open ? this.state.width : width,
@@ -136,8 +137,8 @@ export default class Grid extends React.Component {
                     native
                     items={displayData}
                     keys={d => d.key}
-                    from={{ opacity: 0 }}
-                    leave={{ opacity: 0 }}
+                    from={{ opacity: 0 , display:"none"}}
+                    leave={{ opacity: 0 , display:"none"}}
                     enter={this.update}
                     update={this.update}
                     impl={impl}
@@ -145,13 +146,14 @@ export default class Grid extends React.Component {
                       ...config,
                       delay: this.clicked && !open ? closeDelay : 0,
                     }}>
-                    {(c, i) => ({ opacity, x, y, width, height }) => (
+                    {(c, i) => ({ opacity, x, y, width, height, display }) => (
                       <animated.div
                         style={{
                           ...styles.cell,
                           opacity,
                           width,
                           height,
+                          display,
                           zIndex:
                             lastOpen === c.key || open === c.key ? 1000 : i,
                           transform: interpolate(
