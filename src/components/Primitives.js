@@ -41,7 +41,7 @@ export class Fade extends React.PureComponent {
       children,
       show,
       from = { opacity: 0 , display:"none"},
-      enter = { opacity: 1 , display:"initial"},
+      enter = { opacity: 1 , display:"flex"},
       leave = { opacity: 0 , display:"none"},
       ...rest
     } = this.props
