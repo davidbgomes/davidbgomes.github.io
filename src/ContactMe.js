@@ -1,8 +1,7 @@
 import React from "react"
-import { useAlert } from 'react-alert'
 import { Alert } from 'reactstrap'
-import { Link } from "react-router-dom"
 import {Helmet} from 'react-helmet'
+import emailjs from 'emailjs-com'
 
 class ContactMe extends React.Component{
 
@@ -19,29 +18,37 @@ class ContactMe extends React.Component{
 		this.handleEmailChange = this.handleEmailChange.bind(this)
 		this.handleTextChange = this.handleTextChange.bind(this)
 		this.toggleAlert = this.toggleAlert.bind(this)
+		this.resetForm = this.resetForm.bind(this)
 	}
 
+	handleSubmit(event) {
+		this.toggleAlert()
 
-	handleSubmit (event) {
 		event.preventDefault()
-		const templateId = 'contact_me';
-		this.sendFeedback(templateId, {message_html: this.state.message, from_name: this.state.name, reply_to: this.state.email})
-	}
 
-	sendFeedback (templateId, variables) {
-		window.emailjs.send('gmail', templateId,variables).then(res => {
-    		console.log('Email successfully sent!')
-  		})
-  	// Handle errors here however you like, or use a React error boundary
-  		.catch(err => console.error('The following error has ocurred:', err))
+		const templateId = 'template_ibq4pq9'
+
+		var templateParams = {
+		    message: this.state.message,
+		    from_name: this.state.name,
+		    reply_to: this.state.email
+		}
+
+		emailjs.send('service_x2do2bd',templateId, templateParams, 'user_jRsWYNJ8D5fEIyDRJxvwf')
+    	.then(response => {
+       		console.log('SUCCESS!', response.status, response.text)
+       		this.resetForm()
+    	},
+    	err => {
+       		console.log('FAILED...', err);
+    	})
 	}
 
 	resetForm(){
 		this.setState({
 			name: "",
 			email: "",
-			message: "",
-			showAlert: false,
+			message: ""
 		})
 	}
 
@@ -64,20 +71,14 @@ class ContactMe extends React.Component{
   	}
 
   	toggleAlert(){
-  		if(this.state.name !== "" && this.state.email !== "" && this.state.message !== ""){		
-	  		setTimeout(() => {
-		  		this.setState(prevState => {
-		  			return{
-		  				showAlert: !prevState.showAlert
-		  			}
-		  		})
-	  		}, 500)
-  		}
+  		this.setState(prevState => {
+  			return{
+  				showAlert: !prevState.showAlert
+  			}
+  		})	
   	}
 
 	render(){
-
-			console.log(this.state.showAlert)
 		return(
 
 			<div className="container-fluid" style={{paddingBottom:"200px"}}>
@@ -99,6 +100,7 @@ class ContactMe extends React.Component{
 								<input
 									style={{maxWidth:"500px"}}
 									type="text"
+									value={this.state.name}
 									className="form-control"
 									onChange={this.handleNameChange}
 									id="nameInput"
@@ -115,6 +117,7 @@ class ContactMe extends React.Component{
 								<input
 									style={{maxWidth:"500px"}}
 									type="email"
+									value={this.state.email}
 									className="form-control"
 									onChange={this.handleEmailChange}
 									id="emailInput"
@@ -128,7 +131,7 @@ class ContactMe extends React.Component{
 						<label htmlFor="message">Message:</label>
 						<textarea
 							className="form-control"
-							value={this.message}
+							value={this.state.message}
 							onChange={this.handleTextChange}
 							placeholder="Message goes here"
 							rows="10"
@@ -136,15 +139,13 @@ class ContactMe extends React.Component{
 							required
 						/>
 					</div>
-					<button className ="btn btn-primary" onClick={this.toggleAlert}>
+					<button className ="btn btn-primary">
 		        		Submit
 		      		</button>
 				</form>
 			</div>
 		)
 	}
-	
-
 }
 
 export default ContactMe

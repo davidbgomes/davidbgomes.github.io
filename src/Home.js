@@ -5,7 +5,7 @@ import Grid from "./components/Grid"
 import { config } from 'react-spring/renderprops'
 import { Slug, Fade } from './components/Primitives'
 import data from './components/Data'
-import { faTimes, faUserTie, faAward, faBriefcase , faProjectDiagram } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faUserTie, faBriefcase , faProjectDiagram } from '@fortawesome/free-solid-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
 import { isMobile } from "react-device-detect"
 
@@ -13,7 +13,10 @@ import { isMobile } from "react-device-detect"
 class Cell extends React.Component {
     render() {
 
-        const { toggle, name, description, css, active } = this.props
+        const { toggle, name, css, active } = this.props
+
+        const contactListLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/ContactList">Contact List</a>
+        const oxyllusLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://oxyllus.pt">Oxyllus</a>
 
 
         return (
@@ -53,18 +56,32 @@ class Cell extends React.Component {
                                     <React.Fragment>
                                         <div className={`mb-auto ${isMobile && " gridContentDiv"}`}>
                                             <p className="mt-3">
-                                                Over the years I taught myself Javascript (Vanilla, React.js and Node.js).
-                                                As I went on to learn how to do basic to-do lists and calculators and began to have a deeper understanding of how it works, I 
-                                                started developing an E-Commerce website, that over time and with a lot of work, 
-                                                became <a target="_blank" className="textLink" href="https://oxyllus.pt">Oxyllus</a>.
-                                                 So far it's only available in Portugal. I sell one product at a time and for each sale made, a tree will be planted.
+                                                Over the years working on other technologies, I taught myself Javascript (Vanilla, React.js and Node.js).
+                                                As I went on to learn how to do basic to-do lists and calculators, I started working on more complex websites worthy of showing in a portfolio.
+                                                The most important ones are:
                                             </p>
-                                            <p>
-                                                The website was done with React.js and CSS for the front-end, and Node.js for the back-end. I used Firebase for the Database
-                                                (Firestore), Authentication, Cloud Functions (serverless functions with Node), File Storage and Hosting. I've also used Google Analytics on the site.
-                                                For the payment gateway I integrated two API's, for Credit Card purchases I used Stripe, and for portuguese Multibanco and MB-Way, that are
-                                                used immensely here for online payments, I used EasyPay's API.
-                                            </p>
+                                            <ul>
+                                                <p>
+                                                    <li>{contactListLink} - built with minimalistic design with filters, sign-in page, dashboard page, contact details and node.js backend.</li>
+                                                </p>
+                                            </ul>
+                                            <ul>
+                                                <p>
+                                                    <li>
+                                                        {oxyllusLink} - my first e-commerce website, which allowed me to grow immensely as a developer, entrepreneur, and jack of all trades!
+                                                        <br></br><br></br>
+
+                                                        The website was done with React.js and CSS for the front-end, and Node.js for the back-end. I used Firebase for the Database
+                                                        (Firestore), Authentication, Cloud Functions (serverless functions with Node), File Storage and Hosting. I've also used Google Analytics on the site.
+                                                        For the payment gateway I integrated two API's, for Credit Card purchases I used Stripe, and for portuguese Multibanco and MB-Way, that are
+                                                        used immensely here for online payments, I used EasyPay's API.
+                                                        <br></br><br></br>
+
+                                                        So far it's only available in Portugal. I sell one product at a time and for each sale made, a tree will be planted.
+
+                                                    </li>
+                                                </p>
+                                            </ul>
                                             <p>
                                                 Apart from that, I'm into doing small Python projects as well, like youtube to mp3 converter, instagram follow bot, basic game bots, 
                                                 basically something that I can use and enjoy.
@@ -76,28 +93,27 @@ class Cell extends React.Component {
                                         <div className="mb-auto">
                                             <div className="row">
                                                 <div className="col">
-                                                    <p>
-                                                        <ul>
+                                                    <ul>
+                                                        <p>
                                                             <li className="mt-3">HTML</li>
                                                             <li className="mt-3">CSS</li>
                                                             <li className="mt-3">Javascript</li>
                                                             <li className="mt-3">React.js</li>
                                                             <li className="mt-3">Node.js</li>
                                                             <li className="mt-3">Firebase</li>
-                                                        </ul>
-                                                    </p>
+                                                        </p>
+                                                    </ul> 
                                                 </div>
                                                 <div className="col">
-                                                    <p>
-                                                        <ul>
+                                                    <ul>
+                                                        <p>
                                                             <li className="mt-3">Outsystems</li>
                                                             <li className="mt-3">SQL Server</li>
-
                                                             <li className="mt-3">Python</li>
                                                             <li className="mt-3">Selenium</li>
                                                             <li className="mt-3">Java</li>
-                                                        </ul>
-                                                    </p>
+                                                        </p>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -105,15 +121,16 @@ class Cell extends React.Component {
                                     :
                                         name === "Job Experience" ?
                                         <div className={`mb-auto ${isMobile && " gridContentDiv"}`}>
-                                            <p>
-                                                <ul>
+                                            <ul>
+                                                <p>
                                                     <li className="mt-3">Inocrowd - After college, I interned at a start-up and worked as a Web Developer, mainly with HTML, CSS and Wordpress.</li>
                                                     <li className="mt-3">TimeStamp - Following that experience, I worked on Document Management, which mostly deals with Java, SQL Server, HTML, Javascript and IdocScript.</li>
                                                     <li className="mt-3">Truewind - As I wanted to work abroad, I enlisted in an international intership, which took place in Recife, Brazil and there I started working with
                                                         Outsystems, which is a low code platform for developing web-apps, and after that 6 months in Brazil, I continued working for them in Portugal.
                                                     </li>
-                                                </ul>
-                                            </p>
+                                                </p>
+                                            </ul>
+
                                         </div>
                                         : null
                             }
