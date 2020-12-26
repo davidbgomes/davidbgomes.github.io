@@ -39,22 +39,26 @@ class Cell extends React.Component {
                             <h1>{name}</h1>
                             {name === "About Me" ?
                                 <div className={`mb-auto ${isMobile && " gridContentDiv"}`}>
-                                    <p>Born and raised in Lisbon, I've a Bachelor's Degree in Computer Sciences in Universidade Nova de Lisboa.</p>
-                                    <p>Ever since my Dad bought his first PC and showed me MS-DOS and early videogames, I was fascinated by that world, which led me to
-                                        pursue a carreer as a software engineer.
-                                    </p>
-                                    <p>When I'm not developing, my biggest hobby is playing guitar. I also go to gym, chill out at home reading, watching movies or playing 
-                                    videogames, or go to a bar with friends on the weekends in the B.C. era.
+                                    <p>
+                                        Born and raised in Lisbon, I've a Bachelor's Degree in Computer Sciences in Universidade Nova de Lisboa.
                                     </p>
                                     <p>
-                                    My current goal is to join a company that allows me to work and travel, since that has been my long time dream since I started working, and I've
-                                    been developing my skills and working hard to make that happen.
+                                        Ever since my Dad bought his first PC and showed me MS-DOS and early videogames, I was fascinated by that world, which led me to
+                                        pursue a carreer as a software engineer.
+                                    </p>
+                                    <p>
+                                        When I'm not developing, my biggest hobby is playing guitar. I also go to gym, chill out at home reading, watching movies or playing 
+                                        videogames, or go to a bar with friends on the weekends in the B.C. era.
+                                    </p>
+                                    <p>
+                                        My current goal is to join a company that allows me to work and travel, since that has been my long time dream since I started working, and I've
+                                        been developing my skills and working hard to make that happen.
                                     </p>
                                 </div>
                             :
                                 name === "Projects" ?
                                     <React.Fragment>
-                                        <div className={`mb-auto ${isMobile && " gridContentDiv"}`}>
+                                        <div className="mb-auto gridContentDiv">
                                             <p className="mt-3">
                                                 Over the years working on other technologies, I taught myself Javascript (Vanilla, React.js and Node.js).
                                                 As I went on to learn how to do basic to-do lists and calculators, I started working on more complex websites worthy of showing in a portfolio.
