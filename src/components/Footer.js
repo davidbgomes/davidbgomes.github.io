@@ -16,10 +16,10 @@ function Footer(props){
 						<a href={linkedin} target="_blank" rel="noopener noreferrer">
 							<FontAwesomeIcon className="fa-2x" icon={['fab', 'linkedin']} />
 						</a>
-						<a href={github} target="_blank" rel="noopener noreferrer" style={{paddingLeft: "40px"}}>
+						<a href={github} target="_blank" rel="noopener noreferrer" style={{marginLeft: "40px"}}>
 							<FontAwesomeIcon className="fa-2x" icon={['fab', 'github-square']} />
 						</a>	
-						<Link to="/contactMe" style={{paddingLeft: "40px"}}>
+						<Link to="/contactMe" style={{marginLeft: "40px"}}>
 							<FontAwesomeIcon className="fa-2x" icon={['far','envelope']} />
 						</Link>	
 					</div>
