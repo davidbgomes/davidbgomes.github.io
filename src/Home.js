@@ -17,6 +17,7 @@ class Cell extends React.Component {
 
         const contactListLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/ContactList">Contact List</a>
         const oxyllusLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://oxyllus.pt">Oxyllus</a>
+        const atlasLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/Atlas">Atlas</a>
 
 
         return (
@@ -66,13 +67,18 @@ class Cell extends React.Component {
                                             </p>
                                             <ul>
                                                 <p>
-                                                    <li>{contactListLink} - built with minimalistic design with filters, sign-in page, dashboard page, contact details and node.js backend.</li>
+                                                    <li>{contactListLink} - Built with minimalistic design with filters, sign-in page, dashboard page, contact details and node.js backend.</li>
+                                                </p>
+                                            </ul>
+                                            <ul>
+                                                <p>
+                                                    <li>{atlasLink} - Configurable World Map with Population and GDP stats. Built with React.js, React Simple Maps and Ant Design for the UI.</li>
                                                 </p>
                                             </ul>
                                             <ul>
                                                 <p>
                                                     <li>
-                                                        {oxyllusLink} - my first e-commerce website, which allowed me to grow immensely as a developer, entrepreneur, and jack of all trades!
+                                                        {oxyllusLink} - My first e-commerce website, which allowed me to grow immensely as a developer, entrepreneur, and jack of all trades!
                                                         <br></br><br></br>
 
                                                         The website was done with React.js and CSS for the front-end, and Node.js for the back-end. I used Firebase for the Database

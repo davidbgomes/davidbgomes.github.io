@@ -37,7 +37,7 @@ p {
 }
 
 .footer{
-   	bottom:0px;
+    bottom:0px;
    	width:100%;
    	height: 150px;
 	text-align: center;
@@ -45,95 +45,91 @@ p {
 	color: white;
 }
 
-
-
-
-
 .textLink:visited{
-	color: #004eff;
+	color: #80267d;
 	text-decoration: underline; 
 }
 
 .textLink:hover{
-	color: #4868b1;
+	color: #a70018;
 	text-decoration: underline; 
 }
 
 .textLink{
-	color: #004eff;
+	color: #d06e7c;
 	text-decoration: underline;
 }
 
 
 
 .cell {
-  position: relative;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  color: #777777;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: box-shadow 0.5s;
-  font-size: 10px;
-  line-height: 10px;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #777777;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.5s;
+    font-size: 10px;
+    line-height: 10px;
 }
 
 .default {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 20px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
 }
 
 .cell:hover {
-  box-shadow: 0px 12px 20px -10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 12px 20px -10px rgba(0, 0, 0, 0.3);
 }
 
 .shuffle {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  padding: 0px 20px 0px 20px;
-  width: auto;
-  height: auto;
-  background: white;
-  border: solid 2px #ffaad4;
-  border-radius: 7px;
-  color: #ffaad4;
-  z-index: 100000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 45px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    padding: 0px 20px 0px 20px;
+    width: auto;
+    height: auto;
+    background: white;
+    border: solid 2px #ffaad4;
+    border-radius: 7px;
+    color: #ffaad4;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 45px;
 }
 
 .shuffle:hover {
-  background: #f9f9f9;
+    background: #f9f9f9;
 }
 
 .details {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background: #ffffffa0;
-  color: white;
-  padding: 20px;
-  font-weight: 100;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #ffffffa0;
+    color: white;
+    padding: 20px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .details h1 {
@@ -146,60 +142,56 @@ p {
 }
 
 .details p {
-  color: #777777;
-  font-size: 20px;
-  line-height: 22px;
-  padding-top: 6px;
-  text-transform: none;
-  text-align: justify;
+    color: #777777;
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 6px;
+    text-transform: none;
+    text-align: justify;
 }
 
 .details p:last-child{
-  margin-bottom: auto;
+    margin-bottom: auto;
 }
 
 .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  color: #777777;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #777777;
 }
 
 .gridContentDiv{
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 .main {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+        helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-  padding: 30px 70px 30px 70px;
-  height: auto;
-  display: flex;
+    padding: 30px 70px 30px 70px;
+    height: auto;
+    display: flex;
 }
 
 .grid {
-  flex: 1;
-  max-width:1000px;
-  margin-left: auto;
-  margin-right: auto;
+    flex: 1;
+    max-width:1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gridTitle{
 	font-size: 13px;
 }
-
-
-
-
 
 
 
