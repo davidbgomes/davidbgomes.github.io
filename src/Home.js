@@ -16,7 +16,7 @@ class Cell extends React.Component {
         const { toggle, name, css, active } = this.props
 
         const contactListLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/ContactList">Contact List</a>
-        const oxyllusLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://oxyllus.pt">Oxyllus</a>
+        const oxyllusLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/E-Commerce">Oxyllus</a>
         const atlasLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/Atlas">Atlas</a>
 
 
