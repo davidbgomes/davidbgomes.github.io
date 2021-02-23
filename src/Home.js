@@ -15,8 +15,9 @@ class Cell extends React.Component {
 
         const { toggle, name, css, active } = this.props
 
-        const contactListLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/ContactList">Contact List</a>
         const oxyllusLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/E-Commerce">Oxyllus</a>
+        const contactListLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/ContactList">Contact List</a>
+        const youtubeSearchLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/youtube-search">Youtube Search</a>
         const atlasLink = <a target="_blank" className="textLink" rel="noopener noreferrer" href="https://github.com/davidbgomes/Atlas">Atlas</a>
 
 
@@ -67,16 +68,6 @@ class Cell extends React.Component {
                                             </p>
                                             <ul>
                                                 <p>
-                                                    <li>{contactListLink} - Built with minimalistic design with filters, sign-in page, dashboard page, contact details and node.js backend.</li>
-                                                </p>
-                                            </ul>
-                                            <ul>
-                                                <p>
-                                                    <li>{atlasLink} - Configurable World Map with Population and GDP stats. Built with React.js, React Simple Maps and Ant Design for the UI.</li>
-                                                </p>
-                                            </ul>
-                                            <ul>
-                                                <p>
                                                     <li>
                                                         {oxyllusLink} - My first e-commerce website, which allowed me to grow immensely as a developer, entrepreneur, and jack of all trades!
                                                         <br></br><br></br>
@@ -92,6 +83,22 @@ class Cell extends React.Component {
                                                     </li>
                                                 </p>
                                             </ul>
+                                            <ul>
+                                                <p>
+                                                    <li>{contactListLink} - React App built with minimalistic design with filters, SignIn Page, Dashboard page, Contact Details and Node.js backend.</li>
+                                                </p>
+                                            </ul>
+                                            <ul>
+                                                <p>
+                                                    <li>{youtubeSearchLink} - Youtube search engine using Youtube Data API. Built with React.js and Node.js, server hosted in Heroku.</li>
+                                                </p>
+                                            </ul>
+                                            <ul>
+                                                <p>
+                                                    <li>{atlasLink} - Configurable World Map with Population and GDP stats. Built with React.js, React Simple Maps and Ant Design for the UI.</li>
+                                                </p>
+                                            </ul>
+
                                             <p>
                                                 Apart from that, I'm into doing small Python projects as well, like youtube to mp3 converter, instagram follow bot, basic game bots, 
                                                 basically something that I can use and enjoy.
